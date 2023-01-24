@@ -5,7 +5,7 @@ yt = YouTube(str(input('ENTER URL...\n')))
 
 extract = yt.streams.filter(only_audio = True).first()
 
-out_file = extract.download(output_path = '/Users/connor/Desktop/PyTunes/tunage')
+out_file = extract.download(output_path = './tunage')
 
 base, ext = os.path.splitext(out_file)
 
