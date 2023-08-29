@@ -2,16 +2,19 @@ from pytube import YouTube
 import os
 import sys
 import pyfiglet
+from tqdm import tqdm
+import time
+from time import sleep
     
 def intro():
-    result = pyfiglet.figlet_format("PyTunes", font = "isometric3" )
-    print(result)
-    print('SHLERM INDUSTRIAL SOLUTIONS CORP')
+    banner = pyfiglet.figlet_format("PyTunes", font = "isometric3" )
+    print(banner)
+    print('PYTUNES 2023 SHLERM INDUSTRIAL SOLUTIONS CORP')
 
 def main(): 
     url = input('AWAITING URL...("EXIT" TO TERMINATE)\n')
     if url.lower() == 'exit':
-        print('SIYANORA!')
+        print('SAYONARA!')
         sys.exit()
 
     yt = YouTube(str(url))
@@ -22,8 +25,9 @@ def main():
     os.rename(out_file, new_file)
 
     print(yt.title + ' DOWNLOADED SUCCESSFULLY')
-    print('GROOVE ON SOUL BROTHER')
+    print('GROOVE ON SOUL BROTHER!')
     main()
 
 intro()
 main()
+ 
