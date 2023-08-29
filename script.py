@@ -2,9 +2,6 @@ from pytube import YouTube
 import os
 import sys
 import pyfiglet
-from tqdm import tqdm
-import time
-from time import sleep
     
 def intro():
     banner = pyfiglet.figlet_format("PyTunes", font = "isometric3" )
